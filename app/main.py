@@ -3,9 +3,12 @@ from fastapi.staticfiles import StaticFiles
 from app.config import settings
 from app.api.routes.pages import router as pages_router
 from app.api.routes.debt_api import router as debt_api_router
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
 
 app = FastAPI(title=settings.app_name)
-app.mount("/static", StaticFiles(directory="app/static"), name="static")
+app.mount("/static", StaticFiles(directory=BASE_DIR / "static"), name="static")
 
 app.include_router(pages_router)
 app.include_router(debt_api_router)
