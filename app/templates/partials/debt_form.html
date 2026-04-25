@@ -1,0 +1,23 @@
+<form method="post" action="/calculate" class="debt-form">
+  <label>
+    Deuda actual
+    <input type="number" name="balance" min="1" step="0.01" required value="{{ form.balance if form else 50000 }}" />
+  </label>
+
+  <label>
+    Tasa anual (%)
+    <input type="number" name="annual_rate" min="0" step="0.01" required value="{{ form.annual_rate if form else 45 }}" />
+  </label>
+
+  <label>
+    Pago mensual actual
+    <input type="number" name="monthly_payment" min="1" step="0.01" required value="{{ form.monthly_payment if form else 2000 }}" />
+  </label>
+
+  <label>
+    Pago extra mensual
+    <input type="number" name="extra_payment" min="0" step="0.01" value="{{ form.extra_payment if form else 500 }}" />
+  </label>
+
+  <button type="submit" class="btn-primary">Calcular ahora</button>
+</form>

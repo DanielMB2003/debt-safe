@@ -1,0 +1,1 @@
+console.log("Debt Pro Calculator ready");

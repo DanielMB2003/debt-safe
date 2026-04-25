@@ -1,0 +1,48 @@
+<div class="results-stack">
+  <div class="card headline-card {{ results.health_score }}">
+    <p class="eyebrow">Diagnóstico</p>
+    <h3>{{ results.headline }}</h3>
+    <p>{{ results.summary }}</p>
+  </div>
+
+  <div class="cards-grid two-cols">
+    <article class="card stat-card">
+      <p class="stat-label">Escenario actual</p>
+      {% if results.current.payoff_possible %}
+        <h3>{{ results.current.months }} meses</h3>
+        <p>Intereses: ${{ "{:,.2f}".format(results.current.total_interest) }}</p>
+        <p>Total pagado: ${{ "{:,.2f}".format(results.current.total_paid) }}</p>
+      {% else %}
+        <h3>No liquidable</h3>
+        <p>El primer mes ya genera ${{ "{:,.2f}".format(results.current.monthly_interest_first_month) }} de interés.</p>
+      {% endif %}
+    </article>
+
+    <article class="card stat-card success">
+      <p class="stat-label">Escenario mejorado</p>
+      {% if results.improved.payoff_possible %}
+        <h3>{{ results.improved.months }} meses</h3>
+        <p>Intereses: ${{ "{:,.2f}".format(results.improved.total_interest) }}</p>
+        <p>Total pagado: ${{ "{:,.2f}".format(results.improved.total_paid) }}</p>
+      {% else %}
+        <h3>No liquidable</h3>
+        <p>Necesitas un pago mayor.</p>
+      {% endif %}
+    </article>
+  </div>
+
+  <div class="cards-grid three-cols">
+    <article class="card micro-stat">
+      <p class="stat-label">Meses ahorrados</p>
+      <h4>{{ results.months_saved }}</h4>
+    </article>
+    <article class="card micro-stat">
+      <p class="stat-label">Intereses ahorrados</p>
+      <h4>${{ "{:,.2f}".format(results.interest_saved) }}</h4>
+    </article>
+    <article class="card micro-stat">
+      <p class="stat-label">Pago recomendado</p>
+      <h4>${{ "{:,.2f}".format(results.recommended_payment) }}</h4>
+    </article>
+  </div>
+</div>

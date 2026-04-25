@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="pill">Calculadora profesional</p>
+      <h2 class="hero-title">Descubre cuánto te cuesta tu deuda realmente</h2>
+      <p class="hero-copy">
+        Compara tu pago actual contra un escenario mejorado y entiende en cuánto tiempo sales,
+        cuánto pagas de intereses y cuánto podrías ahorrar.
+      </p>
+      <div class="hero-bullets">
+        <span>Pago actual vs pago mejorado</span>
+        <span>Intereses totales</span>
+        <span>Recomendación inmediata</span>
+      </div>
+    </div>
+
+    <div id="calculadora" class="card form-card">
+      {% include "partials/debt_form.html" %}
+    </div>
+  </div>
+</section>
+
+{% if results %}
+<section class="results-section">
+  <div class="container">
+    {% include "partials/debt_results.html" %}
+  </div>
+</section>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page_title or "Debt Pro Calculator" }}</title>
+    <meta name="description" content="Calcula cuánto te cuesta tu deuda realmente y compara escenarios de pago." />
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/styles.css') }}" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <div>
+          <p class="eyebrow">Debt-Safe</p>
+          <h1 class="brand">Debt-Safe Pro Calculator</h1>
+        </div>
+        <a class="nav-link" href="#calculadora">Probar calculadora</a>
+      </div>
+    </header>
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    <script src="{{ url_for('static', path='/js/debt.js') }}"></script>
+  </body>
+</html>
