@@ -3,6 +3,12 @@ from app.models.debt import DebtInput
 
 
 def compare_debt_scenarios(data: DebtInput) -> dict:
+
+    if not current["payoff_possible"]:
+        headline = "Tu pago actual NO reduce tu deuda."
+    else:
+        headline = f"Podrías ahorrar {months_saved} meses y ${interest_saved:,.2f}."
+
     current = simulate_debt(
         balance=data.balance,
         annual_rate=data.annual_rate,
@@ -61,3 +67,4 @@ def compare_debt_scenarios(data: DebtInput) -> dict:
         "headline": headline,
         "summary": summary,
     }
+
