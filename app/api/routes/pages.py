@@ -45,3 +45,11 @@ def calculate_from_form(
             "form": payload.model_dump(),
         },
     )
+
+@router.get("/recomendaciones", response_class=HTMLResponse)
+def recomendaciones(request: Request):
+    return templates.TemplateResponse(
+        request=request,
+        name="recomendaciones.html",
+        context={"page_title": "Opciones para reducir tu deuda"},
+    )

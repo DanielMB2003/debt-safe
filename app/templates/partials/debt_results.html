@@ -27,6 +27,10 @@
       {% else %}
         <h3>No liquidable</h3>
         <p>Necesitas un pago mayor.</p>
+        <p>Solo en el primer mes pagarías 
+        ${{ "{:,.2f}".format(results.current.monthly_interest_first_month) }} 
+        en intereses.
+        </p>
       {% endif %}
     </article>
   </div>
