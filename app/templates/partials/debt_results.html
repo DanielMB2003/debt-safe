@@ -3,9 +3,10 @@
     <h3>⚠️ Estás perdiendo dinero en intereses</h3>
     <p>
       Solo en el primer mes pagarías 
-      <strong>$X</strong> en intereses.
+      ${{ "{:,.2f}".format(results.current.monthly_interest_first_month) }} 
+      en intereses.
     </p>
-  /div>
+  </div>
 
   <div class="card headline-card {{ results.health_score }}">
     <p class="eyebrow">Diagnóstico</p>
