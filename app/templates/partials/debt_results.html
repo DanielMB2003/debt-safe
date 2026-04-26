@@ -1,17 +1,18 @@
 <div class="results-stack">
-  <div class="card" style="margin-top:15px; border:1px solid #ff7373;">
-    <h3>⚠️ Estás perdiendo dinero en intereses</h3>
-    <p>
-      Solo en el primer mes pagarías 
-      ${{ "{:,.2f}".format(results.current.monthly_interest_first_month) }} 
-      en intereses.
-    </p>
-  </div>
-
+  
   <div class="card headline-card {{ results.health_score }}">
     <p class="eyebrow">Diagnóstico</p>
     <h3>{{ results.headline }}</h3>
     <p>{{ results.summary }}</p>
+  </div>
+
+  <div class="card" style="margin-top:15px; border:1px solid #ff7373;">
+      <h3>⚠️ Estás perdiendo dinero en intereses</h3>
+      <p>
+        Solo en el primer mes pagarías 
+        ${{ "{:,.2f}".format(results.current.monthly_interest_first_month) }} 
+        en intereses.
+      </p>
   </div>
 
   <div class="cards-grid two-cols">
@@ -53,6 +54,15 @@
       <p class="stat-label">Pago recomendado</p>
       <h4>${{ "{:,.2f}".format(results.recommended_payment) }}</h4>
     </article>
+  </div>
+
+  <div class="card">
+    <h3>¿Qué hacer ahora?</h3>
+    <ul>
+      <li>Aumentar tu pago mensual</li>
+      <li>Reducir tu tasa de interés</li>
+      <li>Organizar mejor tus pagos</li>
+    </ul>
   </div>
 
   <div class="card" style="margin-top:20px;">
