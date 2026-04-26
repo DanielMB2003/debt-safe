@@ -1,9 +1,16 @@
 <div class="results-stack">
+  <div class="card" style="margin-top:15px; border:1px solid #ff7373;">
+    <h3>⚠️ Estás perdiendo dinero en intereses</h3>
+    <p>
+      Solo en el primer mes pagarías 
+      <strong>$X</strong> en intereses.
+    </p>
+  /div>
+
   <div class="card headline-card {{ results.health_score }}">
     <p class="eyebrow">Diagnóstico</p>
     <h3>{{ results.headline }}</h3>
     <p>{{ results.summary }}</p>
-    <p>Solo en el primer mes pagarías ${{ "{:,.2f}".format(results.current.monthly_interest_first_month) }} en intereses.</p>
   </div>
 
   <div class="cards-grid two-cols">
@@ -50,10 +57,10 @@
   <div class="card" style="margin-top:20px;">
     <h3>Reduce tu deuda más rápido</h3>
     <p>
-      Existen opciones con menor tasa o herramientas para reorganizar tu deuda.
+      Hay opciones que pueden ayudarte a pagar menos intereses o salir más rápido.
     </p>
     <a href="/recomendaciones" class="btn-primary">
-      Ver opciones recomendadas
+      Ver cómo reducir mis intereses
     </a>
   </div>
 </div>
