@@ -61,7 +61,7 @@ body {
   font-weight: 1000;
   cursor: pointer;
   box-shadow: var(--shadow);
-  gap: 10px;
+  gap: 100px;
 }
 
 .hero {
