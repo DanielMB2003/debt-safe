@@ -192,6 +192,17 @@ body {
   margin-bottom: 8px;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 40px;
+  border-radius: 6px;
+}
+
 .two-cols {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -240,5 +251,11 @@ body {
   .nav {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    height: 32px;
   }
 }

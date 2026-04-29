@@ -3,15 +3,16 @@
 <!doctype html>
 <html lang="es">
   <head>
+    <link rel="icon" type="image/png" href="/static/images/escudo.png">
     <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7559NLLKMZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7559NLLKMZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    gtag('config', 'G-7559NLLKMZ');
-  </script>
+      gtag('config', 'G-7559NLLKMZ');
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ page_title or "Debt Pro Calculator" }}</title>
@@ -23,7 +24,10 @@
     <header class="site-header">
       <div class="container nav">
         <div>
-          <h1 class="brand">Debt-Safe</h1>
+          <div class="brand">
+            <img src="/static/images/Logo_entero.png" alt="DeudaSegura logo" class="logo">
+            <span>DeudaSegura</span>
+          </div>
         </div>
         <a class="nav-link" href="#calculadora">Probar calculadora</a>
       </div>
