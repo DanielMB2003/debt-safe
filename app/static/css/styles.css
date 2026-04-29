@@ -64,6 +64,20 @@ body {
   gap: 100px;
 }
 
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  color: #333;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  background-color: #e0e0e0;
+}
+
 .hero {
   padding: 40px 0 24px;
 }
@@ -107,8 +121,8 @@ body {
 .card {
   background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: var(--radius);
-  padding: 22px;
+  padding: 20px;
+  border-radius: 12px;
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
 }
@@ -150,6 +164,17 @@ body {
 .cards-grid {
   display: grid;
   gap: 18px;
+}
+
+.card a.btn-primary {
+  display: inline-block;
+  margin-top: 16px; /* separación del texto */
+  width: 100%;
+  text-align: center;
+}
+
+.card p {
+  margin-bottom: 8px;
 }
 
 .two-cols {
